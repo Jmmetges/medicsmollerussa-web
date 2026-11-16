@@ -6,14 +6,14 @@
    nut = Nutrició · est = Medicina estètica · esp = Revisions esportives · tel = Telemedicina
    crc = Centre de reconeixement de conductors */
 window.MUTUES = {
-  fam: [],
-  ped: [],
-  inf: [],
-  lab: ['Aegon', 'Aura Seguros', 'AXA', 'Caser Helvetia', 'Cigna', 'Divina Pastora', 'Dsalus', 'Fiatc', 'HNA', 'Mapfre', 'MGC', 'Nueva Mutua Sanitaria', 'Occident', 'Sanitas', 'Vital Seguro'],
+  fam: ['Adeslas', 'Aegon', 'Agrupació Mútua', 'Asisa', 'AXA', 'Caser-Helvetia', 'Cigna', 'Divina Pastora', 'DKV', 'Fiatc', 'Mapfre', 'MGC', 'MGS', 'Nueva Mutua Sanitaria', 'Occident', 'Previsora General', 'Sanitas', 'Vital Seguro'],
+  ped: ['Adeslas', 'Aegon', 'Agrupació Mútua', 'Asisa', 'AXA', 'Caser-Helvetia', 'Cigna', 'Divina Pastora', 'DKV', 'Fiatc', 'Mapfre', 'MGC', 'MGS', 'Nueva Mutua Sanitaria', 'Occident', 'Previsora General', 'Sanitas', 'Vital Seguro'],
+  inf: ['Adeslas', 'Agrupació Mútua', 'Asisa', 'Divina Pastora', 'DKV', 'Fiatc', 'Mapfre', 'MGC', 'Nueva Mutua Sanitaria', 'Occident', 'Sanitas'],
+  lab: ['Aegon', 'Agrupació Mútua', 'AXA', 'Caser-Helvetia', 'Cigna', 'Divina Pastora', 'Fiatc', 'Mapfre', 'MGC', 'MGS', 'Nueva Mutua Sanitaria', 'Occident', 'Previsora General', 'Sanitas', 'Vital Seguro'],
   fis: [],
   fri: [],
-  psi: [],
-  pod: [],
+  psi: ['DKV', 'Divina Pastora', 'Fiatc', 'Sanitas', 'AXA (a través de Dsalus)', 'Cigna (a través de Dsalus)'],
+  pod: ['Agrupació Mútua', 'Asisa', 'AXA', 'Caser-Helvetia', 'Cigna', 'DKV', 'Fiatc', 'MGC', 'Nueva Mutua Sanitaria', 'Sanitas'],
   nut: [],
   est: [],
   esp: [],
