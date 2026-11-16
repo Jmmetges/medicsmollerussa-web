@@ -1,0 +1,39 @@
+name: Desplega l'àrea de professionals
+
+on:
+  push:
+    branches: [main]
+    paths: ['area/**', '.github/workflows/area.yml']
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Proves
+        working-directory: area
+        run: npm test
+      - name: Configura el KV
+        working-directory: area
+        run: sed -i "s/__KV_ID__/${{ vars.KV_ID }}/" wrangler.toml
+      - name: Desplega a Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: area
+          secrets: |
+            BREVO_API_KEY
+          command: >-
+            deploy
+            --var ACCESS_TEAM:${{ vars.ACCESS_TEAM }}
+            --var ACCESS_AUD:${{ vars.ACCESS_AUD }}
+            --var "ADMIN_EMAILS:${{ vars.ADMIN_EMAILS }}"
+            --var CONSENT_TO:${{ vars.CONSENT_TO }}
+            --var CONSENT_FROM:${{ vars.CONSENT_FROM }}
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
