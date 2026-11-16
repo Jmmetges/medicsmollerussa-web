@@ -1,0 +1,14 @@
+# Àrea privada de professionals — Mèdics Mollerussa
+# Es desplega automàticament des de GitHub (.github/workflows/area.yml).
+name = "area-medics-mollerussa"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[vars]
+PUBLIC_ORIGIN = "https://medicsmollerussa.com"
+# ACCESS_TEAM, ACCESS_AUD i ADMIN_EMAILS es passen des de les variables de GitHub en desplegar.
+
+[[kv_namespaces]]
+binding = "AREA"
+id = "__KV_ID__"
