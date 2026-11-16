@@ -68,3 +68,32 @@ if (fm) {
   });
 }
 }
+
+/* Agenda en línia d'Infomed, integrada a la pàgina */
+{
+const A = window.AGENDA || {}, g = id => document.getElementById(id);
+const es = document.documentElement.lang === 'es';
+const panel = g('ao'), box = g('aobox');
+if (panel && A.apikey) {
+  if (A.alternativa) { g('aoalt').href = A.alternativa; g('aoopen').href = A.alternativa; }
+  const load = src => new Promise((ok, ko) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = ko; document.head.appendChild(s); });
+  let started = false;
+  const fail = () => { box.innerHTML = '<p class="muted">' + (es ? 'Ahora mismo la agenda online no carga. Usa el formulario de solicitud de aquí abajo o llámanos al 973 71 16 41.' : 'Ara mateix l\'agenda en línia no carrega. Fes servir el formulari de sol·licitud d\'aquí sota o truca\'ns al 973 71 16 41.') + '</p>'; started = false; };
+  const open = e => {
+    if (e) e.preventDefault();
+    panel.hidden = false; panel.scrollIntoView({behavior: 'smooth', block: 'start'});
+    if (started) return; started = true;
+    const t = setTimeout(fail, 15000);
+    (window.jQuery ? Promise.resolve() : load('https://secure.infomed.es/ClienteHTML/js/jquery-1.6.1.min.js'))
+      .then(() => window.ClienteAgendaOnline ? null : load('https://secure.infomed.es/ClienteHTML/js/infomed.agendaonline-1.0.1.js'))
+      .then(() => { clearTimeout(t); window.ClienteAgendaOnline(A.apikey, '#aobox', {clearTargetContent: true}); })
+      .catch(() => { clearTimeout(t); fail(); });
+  };
+  g('aoopen').addEventListener('click', open);
+  g('aohintbtn').addEventListener('click', open);
+  g('aoclose').addEventListener('click', () => { panel.hidden = true; g('aoopen').focus(); });
+  const sv = g('sv'), hint = g('aohint');
+  if (sv && hint) { const upd = () => { hint.hidden = !(A.serveis || []).includes(sv.value); }; sv.addEventListener('change', upd); upd(); }
+  if (/[?&]agenda=1/.test(location.search)) open();
+}
+}
