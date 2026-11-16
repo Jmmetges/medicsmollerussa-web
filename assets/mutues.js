@@ -9,7 +9,7 @@ window.MUTUES = {
   fam: ['Adeslas', 'Aegon', 'Agrupació Mútua', 'Asisa', 'AXA', 'Caser-Helvetia', 'Cigna', 'Divina Pastora', 'DKV', 'Fiatc', 'Mapfre', 'MGC', 'MGS', 'Nueva Mutua Sanitaria', 'Occident', 'Previsora General', 'Sanitas', 'Vital Seguro'],
   ped: ['Adeslas', 'Aegon', 'Agrupació Mútua', 'Asisa', 'AXA', 'Caser-Helvetia', 'Cigna', 'Divina Pastora', 'DKV', 'Fiatc', 'Mapfre', 'MGC', 'MGS', 'Nueva Mutua Sanitaria', 'Occident', 'Previsora General', 'Sanitas', 'Vital Seguro'],
   inf: ['Adeslas', 'Agrupació Mútua', 'Asisa', 'Divina Pastora', 'DKV', 'Fiatc', 'Mapfre', 'MGC', 'Nueva Mutua Sanitaria', 'Occident', 'Sanitas'],
-  lab: ['Aegon', 'Aura Seguros', 'AXA', 'Caser Helvetia', 'Cigna', 'Divina Pastora', 'Dsalus', 'Fiatc', 'HNA', 'Mapfre', 'MGC', 'Nueva Mutua Sanitaria', 'Occident', 'Sanitas', 'Vital Seguro'],
+  lab: ['Aegon', 'Agrupació Mútua', 'AXA', 'Caser-Helvetia', 'Cigna', 'Divina Pastora', 'Fiatc', 'Mapfre', 'MGC', 'MGS', 'Nueva Mutua Sanitaria', 'Occident', 'Previsora General', 'Sanitas', 'Vital Seguro'],
   fis: [],
   fri: [],
   psi: ['DKV', 'Divina Pastora', 'Fiatc', 'Sanitas', 'AXA (a través de Dsalus)', 'Cigna (a través de Dsalus)'],
