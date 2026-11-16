@@ -7,7 +7,7 @@ const M = window.MUTUES || {};
 /* Estat obert / tancat (hora de Mollerussa) */
 /* Horari del centre (1 = dilluns … 6 = dissabte). CRC: horari autoritzat per Sanitat i Trànsit.
    Dissabte del CRC (9.30–12.30 h), de moment tancat: per obrir-lo afegeix 6:[9.5,12.5] a CRC. */
-const CENTRE = {1:[8,20.5],2:[8,20.5],3:[8,20.5],4:[8,20.5],5:[8,20.5]};
+const CENTRE = {1:[8,20],2:[8,20],3:[8,20],4:[8,20],5:[8,20]};
 const CRC = {2:[18.5,20.5],4:[18.5,20.5]};
 const H = document.querySelector('[data-h="crc"]') ? CRC : CENTRE;
 const D = {ca:['diumenge','dilluns','dimarts','dimecres','dijous','divendres','dissabte'],es:['domingo','lunes','martes','miércoles','jueves','viernes','sábado']};
