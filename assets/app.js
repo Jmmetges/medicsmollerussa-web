@@ -102,3 +102,25 @@ if (panel && A.apikey) {
   if (/[?&]agenda=1/.test(location.search)) open();
 }
 }
+
+/* Mapa de Google amb consentiment (sense galetes fins que l'usuari ho accepta) */
+{
+const K = 'mm-mapa';
+const es = document.documentElement.lang === 'es';
+const get = () => { try { return localStorage.getItem(K) === '1'; } catch (e) { return false; } };
+const set = v => { try { v ? localStorage.setItem(K, '1') : localStorage.removeItem(K); } catch (e) {} };
+const load = box => {
+  const f = document.createElement('iframe');
+  f.src = box.dataset.map; f.title = box.dataset.title || 'Mapa';
+  f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade'; f.allowFullscreen = true;
+  box.replaceChildren(f);
+};
+document.querySelectorAll('[data-map]').forEach(box => {
+  if (get()) load(box);
+  else box.querySelector('[data-mapok]')?.addEventListener('click', () => { set(true); load(box); });
+});
+const st = document.querySelector('[data-mapst]');
+const upd = () => { if (st) st.textContent = get() ? (es ? 'Ahora: mapa aceptado.' : 'Ara: mapa acceptat.') : (es ? 'Ahora: mapa no aceptado.' : 'Ara: mapa no acceptat.'); };
+document.querySelector('[data-mapno]')?.addEventListener('click', () => { set(false); upd(); });
+upd();
+}
