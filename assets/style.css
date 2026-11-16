@@ -170,3 +170,15 @@ footer{padding:48px max(5vw,16px) 24px}
 :root[data-theme=dark] .flogo.c{display:none}:root[data-theme=dark] .flogo.w{display:block}
 @media(max-width:900px){.pgrid,.crcb,.ctaw,.cgrid,.bgrid,.fgrid{grid-template-columns:minmax(0,1fr)}.side{position:static}}
 @media(max-width:600px){.tiles{grid-template-columns:minmax(0,1fr)}.hbtn{display:none}.pmono{width:90vw;bottom:-8%;opacity:.35}}
+
+/* Agenda en línia Infomed */
+.aopanel{grid-column:1/-1;scroll-margin-top:150px;background:var(--mint);border-radius:28px;padding:clamp(16px,3vw,28px)}
+.aopanel[hidden],.aohint[hidden]{display:none}
+.aohead{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.aohead h2{margin:0}
+#aobox{background:#fff;border-radius:18px;overflow:hidden;min-height:120px}
+#aobox>p{padding:18px;margin:0}
+#aobox iframe,.AOFrame{display:block;width:100%;height:min(52em,85vh);border:0}
+#aohelp{margin:12px 0 0}
+.aohint{grid-column:1/-1;background:var(--m621);border-radius:20px;padding:18px 20px}
+.aohint p{margin:0 0 12px;font-size:16px}

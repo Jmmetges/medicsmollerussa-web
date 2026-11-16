@@ -24,11 +24,13 @@
 <main id="main">
 <nav class="crumbs" aria-label="breadcrumb"><div class="wrap"><a href="index.html">Inici</a> <span aria-hidden="true">›</span> <span aria-current="page">Demana cita</span></div></nav><section class="band phero"><img class="pmono" src="assets/mm.png" alt="" aria-hidden="true"><div class="wrap"><h1>Demana cita</h1><p class="lead">Atenem sempre amb cita prèvia, de dilluns a divendres de 8 a 20.30 h.</p></div></section>
 <section class="band book"><div class="wrap bgrid">
-<div><div class="online"><h2 class="h3">Agenda en línia</h2><p>La manera més ràpida: tria servei, professional i hora, i rebràs la confirmació a l'instant.</p><a class="btn" href="https://jmmetges.com/demana-cita/">Obre l'agenda en línia</a></div>
+<div class="aopanel" id="ao" hidden><div class="aohead"><h2 class="h3">Agenda en línia</h2><button class="btn sm alt" type="button" id="aoclose">Tanca l'agenda</button></div><div id="aobox" aria-live="polite"><p class="muted">Carregant l'agenda…</p></div><p class="small muted" id="aohelp">No et carrega? <a id="aoalt" href="https://jmmetges.com/demana-cita/" target="_blank" rel="noopener">Obre-la en una finestra nova</a> o fes servir el <a href="#fm">formulari de sol·licitud</a>.</p></div>
+<div><div class="online"><h2 class="h3">Agenda en línia</h2><p>La manera més ràpida: tria servei, professional i hora, i rebràs la confirmació a l'instant.</p><a class="btn" id="aoopen" href="https://jmmetges.com/demana-cita/">Obre l'agenda en línia</a></div>
 <p class="muted">Alguns professionals encara no tenen agenda en línia. En aquest cas, o si l'agenda no et carrega, envia'ns la sol·licitud amb el formulari i et trucarem per confirmar el dia i l'hora.</p>
 <p class="muted">També ens pots trucar o escriure per WhatsApp al <a href="tel:+34973711641"><b>973 71 16 41</b></a>.</p></div>
 <form id="fm" novalidate data-to="">
 <div class="f full"><label for="sv">Servei *</label><select id="sv" required><option value="">Tria un servei</option><option value="fam">Medicina de família</option><option value="ped">Pediatria</option><option value="inf">Infermeria</option><option value="lab">Analítiques</option><option value="fis">Fisioteràpia</option><option value="fri">Fisioteràpia respiratòria infantil</option><option value="psi">Psicologia</option><option value="pod">Podologia</option><option value="nut">Nutrició</option><option value="est">Medicina estètica</option><option value="esp">Revisions esportives</option><option value="tel">Telemedicina</option><option value="crc">Centre de reconeixement de conductors</option></select></div>
+<div class="aohint full" id="aohint" hidden><p>Aquest servei té <b>agenda en línia</b>: tria el dia i l'hora tu mateix i rebràs la confirmació a l'instant.</p><button class="btn sm" type="button" id="aohintbtn">Reserva a l'agenda en línia</button></div>
 <div class="f"><label for="nm">Nom *</label><input id="nm" autocomplete="given-name" required></div>
 <div class="f"><label for="cg">Cognoms *</label><input id="cg" autocomplete="family-name" required></div>
 <div class="f"><label for="dn">Data de naixement *</label><input id="dn" type="date" required></div>
@@ -56,6 +58,7 @@
 <div class="wrap legal"><span>© 2026 Mèdics Mollerussa</span><span>JM Metges, SL · CIF B26882555 · C. de la Muralla, 2, 1a planta, 25230 Mollerussa</span></div>
 </footer>
 <script src="assets/mutues.js"></script>
+<script src="assets/agenda.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
