@@ -5,7 +5,11 @@ const $ = id => document.getElementById(id);
 const M = window.MUTUES || {};
 
 /* Estat obert / tancat (hora de Mollerussa) */
-const H = {1:[8,20.5],2:[8,20.5],3:[8,20.5],4:[8,20.5],5:[8,20.5]};
+/* Horari del centre (1 = dilluns … 6 = dissabte). CRC: horari autoritzat per Sanitat i Trànsit.
+   Dissabte del CRC (9.30–12.30 h), de moment tancat: per obrir-lo afegeix 6:[9.5,12.5] a CRC. */
+const CENTRE = {1:[8,20.5],2:[8,20.5],3:[8,20.5],4:[8,20.5],5:[8,20.5]};
+const CRC = {2:[18.5,20.5],4:[18.5,20.5]};
+const H = document.querySelector('[data-h="crc"]') ? CRC : CENTRE;
 const D = {ca:['diumenge','dilluns','dimarts','dimecres','dijous','divendres','dissabte'],es:['domingo','lunes','martes','miércoles','jueves','viernes','sábado']};
 const hh = h => (h % 1 ? Math.floor(h) + '.30' : h) + ' h';
 const clock = () => {
@@ -48,7 +52,8 @@ if (fm) {
     as.value = [...as.options].some(o => o.value === prev) ? prev : '';
     ash.textContent = ls.length ? '' : (es ? 'Este servicio, por ahora, solo es privado.' : 'Aquest servei, de moment, només és privat.');
   };
-  sv.addEventListener('change', ins); ins();
+  const svh = $('svh'); const crch = () => { if (svh) svh.textContent = sv.value === 'crc' ? svh.dataset.crc : ''; };
+  sv.addEventListener('change', ins); sv.addEventListener('change', crch); ins(); crch();
   const val = id => { const e = $(id); return e.tagName === 'SELECT' ? (e.value ? e.options[e.selectedIndex].text : '') : e.value.trim(); };
   fm.addEventListener('submit', e => {
     e.preventDefault();
