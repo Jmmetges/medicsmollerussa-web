@@ -183,3 +183,14 @@ footer{padding:48px max(5vw,16px) 24px}
 .aohint{grid-column:1/-1;background:var(--m621);border-radius:20px;padding:18px 20px}
 .aohint p{margin:0 0 12px;font-size:16px}
 .story a{color:inherit;text-underline-offset:4px}
+
+/* Com arribar-hi */
+.howto .hgrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px 56px;align-items:start}
+.howl{list-style:none;padding:0;margin:22px 0 26px}
+.howl li{display:grid;gap:2px;padding:14px 0;border-top:1px solid var(--line)}
+.howl li:first-child{border-top:0;padding-top:0}
+.howl span{color:var(--soft);font-size:16px}
+.mapw{border-radius:28px;overflow:hidden;background:var(--mint);aspect-ratio:4/3;min-height:320px}
+.mapw iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:900px){.howto .hgrid{grid-template-columns:minmax(0,1fr)}.mapw{aspect-ratio:1/1}}
+.howto{scroll-margin-top:80px}@media(max-width:900px){.howto{scroll-margin-top:180px}}
