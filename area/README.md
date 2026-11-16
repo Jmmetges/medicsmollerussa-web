@@ -71,6 +71,22 @@ En el repositorio, **Settings → Secrets and variables → Actions**:
 3. El profesional entra con su correo, rellena la ficha y la envía.
 4. Dirección la ve en **Per aprovar** y la aprueba. Marca «Visible a la web» si debe salir en el cuadro médico.
 
+## Consentimiento informado de pacientes
+
+Las páginas `consentiment-informat.html` y `es/consentimiento-informado.html` de la web envían el formulario a esta misma área (`/public/consentiment`). Cada envío:
+
+- **Se registra** con la fecha y la hora, la versión del texto aceptado, la IP y el navegador. Dirección lo ve en la pestaña **Consentiments** y lo puede exportar a Excel (CSV).
+- **Se envía por correo** al centro, y una copia al paciente o a su tutor, a través de **Brevo** (proveedor de correo europeo, gratuito hasta 300 correos al día).
+- Si el paciente es **menor de 16 años** (según la fecha de nacimiento), firma el padre, la madre o el tutor legal. El límite se cambia en `EDAT_MAJOR` (aquí y en `assets/consentiment.js`).
+
+Configuración, además de lo anterior:
+1. Crea una cuenta en <https://www.brevo.com>, verifica el remitente (p. ej. `no-reply@medicsmollerussa.com` o el correo del centro) y crea una **API key** (*SMTP & API → API Keys*).
+2. En GitHub: secreto `BREVO_API_KEY`; variables `CONSENT_TO` (correo del centro que recibe los consentimientos) y `CONSENT_FROM` (remitente verificado en Brevo).
+3. En `assets/consentiment.js`, pon en `ENDPOINT` la dirección del área + `/public/consentiment`.
+4. **Antes de publicar:** sustituye el texto provisional por el que facilite el delegado de protección de datos (DPD), crea las páginas de política de privacidad (`politica-privacitat.html` y `es/politica-privacidad.html`) y cambia `data-versio` del formulario cada vez que cambie el texto.
+
+Sin `BREVO_API_KEY`, los consentimientos se siguen registrando, pero no se envía ningún correo.
+
 ## Más adelante
 - **Dirección propia** (p. ej. `area.medicsmollerussa.com`): requiere gestionar los DNS del dominio en Cloudflare en lugar de en dinahosting.
 - **Cuadro médico en la web**: mostrar en medicsmollerussa.com los profesionales aprobados a partir de `/public/professionals.json`.

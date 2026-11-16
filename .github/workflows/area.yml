@@ -26,8 +26,14 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: area
+          secrets: |
+            BREVO_API_KEY
           command: >-
             deploy
             --var ACCESS_TEAM:${{ vars.ACCESS_TEAM }}
             --var ACCESS_AUD:${{ vars.ACCESS_AUD }}
             --var "ADMIN_EMAILS:${{ vars.ADMIN_EMAILS }}"
+            --var CONSENT_TO:${{ vars.CONSENT_TO }}
+            --var CONSENT_FROM:${{ vars.CONSENT_FROM }}
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}

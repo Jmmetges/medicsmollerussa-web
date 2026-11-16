@@ -104,12 +104,12 @@ async function render() {
   let npend = 0;
   if (ME.admin) {
     try { window.__pros = await api('/api/admin/pros'); npend = window.__pros.filter(p => p.pendent).length; } catch (e) { toast(e.message, 1); }
-    tabs.push(['pendents', 'Per aprovar', npend], ['pros', 'Professionals'], ['gdocs', 'Gestió de documents']);
+    tabs.push(['pendents', 'Per aprovar', npend], ['pros', 'Professionals'], ['gdocs', 'Gestió de documents'], ['consent', 'Consentiments']);
   }
   const nav = h('nav', { class: 'tabs', role: 'tablist' }, tabs.map(([k, t, n]) => h('button', { role: 'tab', 'aria-selected': String(TAB === k), onclick: () => { TAB = k; render(); } }, t, n ? h('span', { class: 'n' }, n) : null)));
   const body = h('div');
   app.replaceChildren(nav, body);
-  try { await ({ fitxa: vFitxa, docs: vDocs, pendents: vPendents, pros: vPros, gdocs: vGDocs })[TAB](body); }
+  try { await ({ fitxa: vFitxa, docs: vDocs, pendents: vPendents, pros: vPros, gdocs: vGDocs, consent: vConsent })[TAB](body); }
   catch (e) { body.replaceChildren(h('div', { class: 'card' }, h('p', null, e.message))); }
 }
 
@@ -240,6 +240,24 @@ async function vPros(el) {
         h('td', { class: 'small' }, tog(p, 'actiu', 'Accés a l\\'àrea'), tog(p, 'visible', 'Visible a la web'), tog(p, 'agenda_online', 'Té agenda en línia')),
         h('td', null, h('button', { class: 'btn bad sm', onclick: async () => { if (!confirm('Vols esborrar ' + p.nom + ' i la seva fitxa?')) return; try { await api('/api/admin/pros/' + encodeURIComponent(p.email), { method: 'DELETE' }); toast('Esborrat'); render(); } catch (e) { toast(e.message, 1); } } }, 'Esborra'))))) : h('p', { class: 'empty' }, 'Encara no hi ha cap professional.'));
   el.replaceChildren(add, list);
+}
+/* ---- Direcció: consentiments ---- */
+let CQ = '';
+async function vConsent(el) {
+  const regs = await api('/api/admin/consentiments?q=' + encodeURIComponent(CQ));
+  const q = h('input', { type: 'search', placeholder: 'Cerca per nom, DNI, correu o referència', value: CQ });
+  const form = h('form', { class: 'row', onsubmit: e => { e.preventDefault(); CQ = q.value.trim(); render(); } }, h('div', { style: 'flex:1;min-width:220px' }, q), h('button', { class: 'btn alt sm', type: 'submit' }, 'Cerca'),
+    h('button', { class: 'btn sm', type: 'button', onclick: async () => {
+      try { const r = await fetch('/api/admin/consentiments.csv?q=' + encodeURIComponent(CQ), { headers: { 'x-area': '1' } }); if (!r.ok) throw new Error('No s\'ha pogut exportar');
+        const url = URL.createObjectURL(await r.blob()); const a = h('a', { href: url, download: 'consentiments.csv' }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 5000);
+      } catch (e) { toast(e.message, 1); } } }, 'Exporta a Excel (CSV)'));
+  const rows = regs.map(r => h('tr', null,
+    h('td', null, h('b', null, r.pacient.nom), h('div', { class: 'muted small' }, (r.pacient.dni || 'sense DNI') + ' · ' + r.pacient.naixement), r.tutor ? h('div', { class: 'small' }, 'Tutor/a: ' + r.tutor.nom + ' (' + r.tutor.dni + ')') : null),
+    h('td', { class: 'small' }, fdata(r.data), h('div', { class: 'muted' }, r.id)),
+    h('td', { class: 'small hide-s' }, (r.tutor ? r.tutor.email : r.pacient.email) || '—', h('div', { class: 'muted' }, 'Còpia enviada: ' + (r.correu_pacient ? 'sí' : 'no'))),
+    h('td', { class: 'small hide-s' }, 'Text ' + r.versio, h('div', { class: 'muted' }, 'Comunicacions: ' + (r.comunicacions ? 'sí' : 'no')))));
+  el.replaceChildren(h('div', { class: 'card' }, h('h2', null, 'Consentiments informats'), h('p', { class: 'muted small' }, 'Registre dels consentiments signats des de la web. ' + regs.length + (CQ ? ' resultats.' : ' en total.')), form,
+    regs.length ? h('table', { style: 'margin-top:14px' }, h('tr', null, h('th', null, 'Pacient'), h('th', null, 'Data'), h('th', { class: 'hide-s' }, 'Correu'), h('th', { class: 'hide-s' }, 'Detalls')), rows) : h('p', { class: 'empty' }, CQ ? 'Cap resultat.' : 'Encara no hi ha cap consentiment.')));
 }
 boot();
 })();

@@ -1,2 +1,2 @@
 { "name": "area-professionals", "private": true, "type": "module",
-  "scripts": { "test": "node test/api.test.js && node test/jwt.test.js" } }
+  "scripts": { "test": "node test/api.test.js && node test/jwt.test.js && node test/consent.test.js" } }

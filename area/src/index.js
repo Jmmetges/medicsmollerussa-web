@@ -9,6 +9,7 @@
    KV: AREA */
 
 import { appHtml } from './app.js';
+import { postConsentiment, llistaConsentiments, csvConsentiments } from './consentiment.js';
 
 export const SERVEIS = {
   fam: 'Medicina de família', ped: 'Pediatria', inf: 'Infermeria', lab: 'Analítiques',
@@ -116,7 +117,12 @@ export async function handle(request, env, ctx, auth = verifyAccess) {
   // Públic (sense Access: cal una regla "Bypass" per a /public/*)
   if (path.startsWith('/public/')) {
     const cors = { 'access-control-allow-origin': env.PUBLIC_ORIGIN || '*', 'vary': 'origin' };
-    if (m === 'OPTIONS') return new Response(null, { status: 204, headers: { ...cors, 'access-control-allow-methods': 'GET' } });
+    if (m === 'OPTIONS') return new Response(null, { status: 204, headers: { ...cors, 'access-control-allow-methods': 'GET, POST', 'access-control-allow-headers': 'content-type', 'access-control-max-age': '86400' } });
+    if (path === '/public/consentiment' && m === 'POST') {
+      const r = await postConsentiment(request, env, json, err);
+      const h = new Headers(r.headers); for (const [k, v] of Object.entries(cors)) h.set(k, v);
+      return new Response(r.body, { status: r.status, headers: h });
+    }
     if (m !== 'GET') return err(405, 'Mètode no permès');
     if (path === '/public/professionals.json')
       return json(await publicList(env), 200, { ...cors, 'cache-control': 'public, max-age=300' });
@@ -204,6 +210,13 @@ export async function handle(request, env, ctx, auth = verifyAccess) {
   /* ---- direcció ---- */
   if (!path.startsWith('/api/admin/')) return err(404, 'No trobat');
   if (!isAdmin) return err(403, 'Només per a direcció');
+
+  if (path === '/api/admin/consentiments' && m === 'GET')
+    return json(await llistaConsentiments(env, url.searchParams.get('q')));
+  if (path === '/api/admin/consentiments.csv' && m === 'GET')
+    return withSec(new Response(csvConsentiments(await llistaConsentiments(env, url.searchParams.get('q'))), { headers: {
+      'content-type': 'text/csv; charset=utf-8', 'cache-control': 'no-store',
+      'content-disposition': `attachment; filename="consentiments-${new Date().toISOString().slice(0, 10)}.csv"` } }));
 
   if (path === '/api/admin/pros' && m === 'GET')
     return json((await allPros(env)).map(proPublic).sort((a, b) => a.nom.localeCompare(b.nom, 'ca')));

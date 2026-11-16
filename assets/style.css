@@ -204,3 +204,20 @@ footer{padding:48px max(5vw,16px) 24px}
 .legaltext .cktab th,.legaltext .cktab td{text-align:left;padding:10px 10px 10px 0;border-top:1px solid var(--line);vertical-align:top}
 .legaltext .cktab th{font-weight:500;border-top:0;color:var(--soft);font-size:14px}
 @media(max-width:700px){.legaltext .cktab thead{display:none}.legaltext .cktab tr{display:block;border-top:1px solid var(--line);padding:8px 0}.legaltext .cktab td{display:block;border:0;padding:2px 0}}
+/* Consentiment informat */
+.cgrid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 64px;align-items:start}
+.ctbox{max-height:520px;overflow:auto;background:var(--mint);border-radius:20px;padding:22px 24px;margin:14px 0 12px;font-size:15px}
+.ctbox p{color:var(--ink)}.ctbox .pending{background:var(--sand2);border-radius:12px;padding:12px 14px;margin:0}
+.cform{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.cform .full,.cform .h3{grid-column:1/-1}
+.cform label{display:block;font-weight:500;font-size:15px;margin-bottom:6px}
+.cform fieldset{border:0;border-radius:20px;background:var(--sand2);padding:18px 20px;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+.cform fieldset[hidden]{display:none}
+.cform legend{font-weight:500;padding:0;float:left;width:100%;margin-bottom:4px}
+.cform fieldset p{grid-column:1/-1;margin:0}
+.checks2{display:grid;gap:10px}.checks2 label{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:0}
+.checks2 input{width:20px;height:20px;min-height:0;flex:none;margin-top:3px;accent-color:var(--deep)}
+.checks2 a{color:var(--deep)}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+#c_ok:focus{outline:none}
+@media(max-width:900px){.cgrid2,.cform,.cform fieldset{grid-template-columns:minmax(0,1fr)}}

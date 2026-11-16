@@ -7,7 +7,8 @@ workers_dev = true
 
 [vars]
 PUBLIC_ORIGIN = "https://medicsmollerussa.com"
-# ACCESS_TEAM, ACCESS_AUD i ADMIN_EMAILS es passen des de les variables de GitHub en desplegar.
+EDAT_MAJOR = "16"  # ha de coincidir amb assets/consentiment.js
+# ACCESS_TEAM, ACCESS_AUD, ADMIN_EMAILS, CONSENT_TO i CONSENT_FROM (i el secret BREVO_API_KEY) es passen des de les variables de GitHub en desplegar.
 
 [[kv_namespaces]]
 binding = "AREA"
