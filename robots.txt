@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /area/
+
+Sitemap: https://medicsmollerussa.com/sitemap.xml
