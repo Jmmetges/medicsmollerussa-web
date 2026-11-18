@@ -9,7 +9,7 @@
     {"nom": "Ana Gómez Gimeno", "titol_ca": "Psicòloga · Reconeixement de conductors", "titol_es": "Psicóloga · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "35182", "visible": true},
     {"nom": "Dr. Javier Astorga", "titol_ca": "Metge · Medicina estètica", "titol_es": "Médico · Medicina estética", "serveis": [ "est" ], "colegiat": "05336", "visible": true},
     {"nom": "Laura Pallàs", "titol_ca": "Infermera", "titol_es": "Enfermera", "serveis": [ "inf" ], "colegiat": "4101", "visible": true},
-    {"nom": "Maria Escudero", "titol_ca": "Infermera · Analítiques", "titol_es": "Enfermera · Análisis clínicos", "serveis": [ "inf", "lab" ], "colegiat": "", "visible": true},
+    {"nom": "Maria Escudero", "titol_ca": "Infermera", "titol_es": "Enfermera", "serveis": [ "inf" ], "colegiat": "", "visible": true},
     {"nom": "Maite Ortiga", "titol_ca": "Fisioterapeuta", "titol_es": "Fisioterapeuta", "serveis": [ "fis" ], "colegiat": "3722", "visible": true},
     {"nom": "Oriol Vila del Pozo", "titol_ca": "Fisioterapeuta", "titol_es": "Fisioterapeuta", "serveis": [ "fis" ], "colegiat": "", "visible": true},
     {"nom": "Elena Lafuente", "titol_ca": "Fisioterapeuta · Fisioteràpia respiratòria infantil", "titol_es": "Fisioterapeuta · Fisioterapia respiratoria infantil", "serveis": [ "fri" ], "colegiat": "", "visible": true},
