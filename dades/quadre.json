@@ -15,7 +15,7 @@
     {"nom": "Elena Lafuente", "titol_ca": "Fisioterapeuta · Fisioteràpia respiratòria infantil", "titol_es": "Fisioterapeuta · Fisioterapia respiratoria infantil", "serveis": [ "fri" ], "colegiat": "", "visible": true},
     {"nom": "Mercè Porta", "titol_ca": "Psicòloga · Reconeixement de conductors", "titol_es": "Psicóloga · Reconocimiento de conductores", "serveis": [ "psi", "crc" ], "colegiat": "29214", "visible": true},
     {"nom": "Montse Palacio", "titol_ca": "Psicòloga · Reconeixement de conductors", "titol_es": "Psicóloga · Reconocimiento de conductores", "serveis": [ "psi", "crc" ], "colegiat": "32432", "visible": true},
-    {"nom": "Ana Maldonado", "titol_ca": "Psicòloga general sanitària", "titol_es": "Psicóloga general sanitaria", "serveis": [ "psi" ], "colegiat": "37150", "visible": true},
+    {"nom": "Anna Maldonado", "titol_ca": "Psicòloga general sanitària", "titol_es": "Psicóloga general sanitaria", "serveis": [ "psi" ], "colegiat": "37150", "visible": true},
     {"nom": "Carlos Badia", "titol_ca": "Podòleg", "titol_es": "Podólogo", "serveis": [ "pod" ], "colegiat": "838252153", "visible": true},
     {"nom": "Rosa Brau", "titol_ca": "Nutricionista", "titol_es": "Nutricionista", "serveis": [ "nut" ], "colegiat": "CAT001922", "visible": true}
   ]
