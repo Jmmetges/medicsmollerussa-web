@@ -1,19 +1,21 @@
 {
   "_ajuda": "Quadre mèdic. Per afegir, treure o canviar un professional, edita aquesta llista. serveis: fam, ped, inf, lab, fis, fri, psi, pod, nut, est, esp, tel, crc, rml. visible: false per amagar-lo sense esborrar-lo. colegiat: opcional.",
   "professionals": [
-    {"nom": "Dr. Òscar Villanueva", "titol_ca": "Director mèdic · Reconeixement de conductors", "titol_es": "Director médico · Reconocimiento de conductores", "serveis": ["crc"], "colegiat": "", "visible": true},
-    {"nom": "Dr. Amós Villanueva", "titol_ca": "Metge · Reconeixement de conductors", "titol_es": "Médico · Reconocimiento de conductores", "serveis": ["crc"], "colegiat": "", "visible": true},
-    {"nom": "Dr. José María Herrero Binaburo", "titol_ca": "Pediatre", "titol_es": "Pediatra", "serveis": ["ped"], "colegiat": "", "visible": true},
-    {"nom": "Dr. Pau Olivares", "titol_ca": "Metge de família", "titol_es": "Médico de familia", "serveis": ["fam"], "colegiat": "", "visible": true},
-    {"nom": "Dr. Javier Astorga", "titol_ca": "Metge · Medicina estètica", "titol_es": "Médico · Medicina estética", "serveis": ["est"], "colegiat": "", "visible": true},
-    {"nom": "Laura Pallás", "titol_ca": "Infermera", "titol_es": "Enfermera", "serveis": ["inf"], "colegiat": "", "visible": true},
-    {"nom": "Maite Ortiga", "titol_ca": "Fisioterapeuta", "titol_es": "Fisioterapeuta", "serveis": ["fis"], "colegiat": "", "visible": true},
-    {"nom": "Oriol Vila del Pozo", "titol_ca": "Fisioterapeuta", "titol_es": "Fisioterapeuta", "serveis": ["fis"], "colegiat": "", "visible": true},
-    {"nom": "Elena Lafuente", "titol_ca": "Fisioterapeuta · Fisioteràpia respiratòria infantil", "titol_es": "Fisioterapeuta · Fisioterapia respiratoria infantil", "serveis": ["fri"], "colegiat": "", "visible": true},
-    {"nom": "Mercè Porta", "titol_ca": "Psicòloga", "titol_es": "Psicóloga", "serveis": ["psi"], "colegiat": "", "visible": true},
-    {"nom": "Montse Palacio", "titol_ca": "Psicòloga", "titol_es": "Psicóloga", "serveis": ["psi"], "colegiat": "", "visible": true},
-    {"nom": "Ana Maldonado", "titol_ca": "Psicòloga general sanitària", "titol_es": "Psicóloga general sanitaria", "serveis": ["psi"], "colegiat": "", "visible": true},
-    {"nom": "Borja Cerdà", "titol_ca": "Podòleg", "titol_es": "Podólogo", "serveis": ["pod"], "colegiat": "", "visible": true},
-    {"nom": "Carlos Badia", "titol_ca": "Podòleg", "titol_es": "Podólogo", "serveis": ["pod"], "colegiat": "", "visible": true}
+    {"nom": "Dr. Òscar Villanueva", "titol_ca": "Director mèdic · Reconeixement de conductors", "titol_es": "Director médico · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "", "visible": true},
+    {"nom": "Dr. Amós Villanueva", "titol_ca": "Metge · Reconeixement de conductors", "titol_es": "Médico · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "", "visible": true},
+    {"nom": "Dr. José María Herrero Binaburo", "titol_ca": "Pediatre", "titol_es": "Pediatra", "serveis": [ "ped" ], "colegiat": "", "visible": true},
+    {"nom": "Dra. Gisela", "titol_ca": "Pediatra", "titol_es": "Pediatra", "serveis": [ "ped" ], "colegiat": "", "visible": true},
+    {"nom": "Dr. Pau Olivares", "titol_ca": "Metge · Reconeixement de conductors", "titol_es": "Médico · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "", "visible": true},
+    {"nom": "Dr. Javier Astorga", "titol_ca": "Metge · Medicina estètica", "titol_es": "Médico · Medicina estética", "serveis": [ "est" ], "colegiat": "", "visible": true},
+    {"nom": "Laura Pallás", "titol_ca": "Infermera", "titol_es": "Enfermera", "serveis": [ "inf" ], "colegiat": "", "visible": true},
+    {"nom": "Maria Escudero", "titol_ca": "Infermera", "titol_es": "Enfermera", "serveis": [ "inf" ], "colegiat": "", "visible": true},
+    {"nom": "Maite Ortiga", "titol_ca": "Fisioterapeuta", "titol_es": "Fisioterapeuta", "serveis": [ "fis" ], "colegiat": "", "visible": true},
+    {"nom": "Oriol Vila del Pozo", "titol_ca": "Fisioterapeuta", "titol_es": "Fisioterapeuta", "serveis": [ "fis" ], "colegiat": "", "visible": true},
+    {"nom": "Elena Lafuente", "titol_ca": "Fisioterapeuta · Fisioteràpia respiratòria infantil", "titol_es": "Fisioterapeuta · Fisioterapia respiratoria infantil", "serveis": [ "fri" ], "colegiat": "", "visible": true},
+    {"nom": "Mercè Porta", "titol_ca": "Psicòloga", "titol_es": "Psicóloga", "serveis": [ "psi" ], "colegiat": "", "visible": true},
+    {"nom": "Montse Palacio", "titol_ca": "Psicòloga", "titol_es": "Psicóloga", "serveis": [ "psi" ], "colegiat": "", "visible": true},
+    {"nom": "Ana Maldonado", "titol_ca": "Psicòloga general sanitària", "titol_es": "Psicóloga general sanitaria", "serveis": [ "psi" ], "colegiat": "", "visible": true},
+    {"nom": "Borja Cerdà", "titol_ca": "Podòleg", "titol_es": "Podólogo", "serveis": [ "pod" ], "colegiat": "", "visible": true},
+    {"nom": "Carlos Badia", "titol_ca": "Podòleg", "titol_es": "Podólogo", "serveis": [ "pod" ], "colegiat": "", "visible": true}
   ]
 }
