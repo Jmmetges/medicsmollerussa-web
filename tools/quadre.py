@@ -61,6 +61,8 @@ def ld(es, url):
         person = {"@type": "Person", "name": p['nom'], "jobTitle": p['titol_es' if es else 'titol_ca'],
                   "worksFor": {"@id": "https://medicsmollerussa.com/#centre"},
                   "url": f"https://medicsmollerussa.com/{url}#{slug(p['nom'])}"}
+        if p.get('colegiat'):
+            person["identifier"] = {"@type": "PropertyValue", "propertyID": "Núm. col·legiat", "value": p['colegiat']}
         items.append({"@type": "ListItem", "position": i, "item": person})
     return {"@context": "https://schema.org", "@type": "ItemList", "name": "Quadre mèdic" if not es else "Cuadro médico", "itemListElement": items}
 
