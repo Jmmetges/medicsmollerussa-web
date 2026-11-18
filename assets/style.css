@@ -204,3 +204,15 @@ footer{padding:48px max(5vw,16px) 24px}
 .legaltext .cktab th,.legaltext .cktab td{text-align:left;padding:10px 10px 10px 0;border-top:1px solid var(--line);vertical-align:top}
 .legaltext .cktab th{font-weight:500;border-top:0;color:var(--soft);font-size:14px}
 @media(max-width:700px){.legaltext .cktab thead{display:none}.legaltext .cktab tr{display:block;border-top:1px solid var(--line);padding:8px 0}.legaltext .cktab td{display:block;border:0;padding:2px 0}}
+/* Mútues */
+.mutintro{color:var(--soft);font-size:18px;max-width:62ch;margin-bottom:28px}
+.mutgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}
+.mutsv{padding:20px 0;border-top:1px solid var(--line)}
+.mutsv h2 a{text-decoration:none}.mutsv h2 a:hover{text-decoration:underline;text-underline-offset:4px}
+.mutsv p{margin:8px 0 0}
+.mutchips{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.mutchips li{background:var(--mint);border-radius:99px;padding:5px 12px;font-size:14px;font-weight:400}
+.mutchips li.pv{background:var(--m621);font-weight:500}
+.mutlink{display:inline-block;margin-top:6px;color:var(--deep);text-underline-offset:4px}
+@media(max-width:800px){.mutgrid{grid-template-columns:minmax(0,1fr)}}
+.mut .btn{justify-self:start}

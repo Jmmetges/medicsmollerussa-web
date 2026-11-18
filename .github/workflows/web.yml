@@ -1,0 +1,31 @@
+name: Actualitza mútues i sitemap
+
+# Quan es canvia assets/mutues.js (o qualsevol pàgina), escriu les mútues a l'HTML,
+# actualitza les preguntes freqüents, la pàgina de mútues i el sitemap.
+on:
+  push:
+    branches: [main]
+    paths: ['assets/mutues.js', '**.html', 'tools/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualitza:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Mútues, preguntes freqüents i pàgina de mútues
+        run: python3 tools/actualitza-mutues.py
+      - name: Sitemap
+        run: python3 tools/sitemap.py
+      - name: Desa els canvis
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # el sitemap canvia de data cada dia: només es desa si hi ha altres canvis
+          if git diff --cached --quiet -- . ':(exclude)sitemap.xml'; then echo "Sense canvis"; exit 0; fi
+          git commit -m "Actualització automàtica: mútues i sitemap"
+          git push
