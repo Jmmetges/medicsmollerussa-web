@@ -120,6 +120,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://medicsmollerussa.com/contacte.html"/>
   </url>
   <url>
+    <loc>https://medicsmollerussa.com/es/cuadro-medico.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://medicsmollerussa.com/quadre-medic.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://medicsmollerussa.com/es/cuadro-medico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://medicsmollerussa.com/quadre-medic.html"/>
+  </url>
+  <url>
     <loc>https://medicsmollerussa.com/es/</loc>
     <lastmod>2026-11-18</lastmod>
     <xhtml:link rel="alternate" hreflang="ca" href="https://medicsmollerussa.com/"/>
@@ -251,6 +258,13 @@
     <xhtml:link rel="alternate" hreflang="ca" href="https://medicsmollerussa.com/mutues.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://medicsmollerussa.com/es/mutuas.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://medicsmollerussa.com/mutues.html"/>
+  </url>
+  <url>
+    <loc>https://medicsmollerussa.com/quadre-medic.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://medicsmollerussa.com/quadre-medic.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://medicsmollerussa.com/es/cuadro-medico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://medicsmollerussa.com/quadre-medic.html"/>
   </url>
   <url>
     <loc>https://medicsmollerussa.com/serveis/analitiques.html</loc>

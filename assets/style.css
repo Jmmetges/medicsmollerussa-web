@@ -216,3 +216,20 @@ footer{padding:48px max(5vw,16px) 24px}
 .mutlink{display:inline-block;margin-top:6px;color:var(--deep);text-underline-offset:4px}
 @media(max-width:800px){.mutgrid{grid-template-columns:minmax(0,1fr)}}
 .mut .btn{justify-self:start}
+/* Quadre mèdic */
+.qsv{padding:22px 0;border-top:1px solid var(--line)}
+.qsv h2 a{text-decoration:none}.qsv h2 a:hover{text-decoration:underline;text-underline-offset:4px}
+.pros{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px}
+.pro{display:flex;gap:14px;align-items:flex-start;background:var(--mint);border-radius:20px;padding:16px 18px;scroll-margin-top:90px}
+.pro:target{outline:2px solid var(--deep)}
+.av{flex:none;width:48px;height:48px;border-radius:50%;background:var(--m622);color:var(--ink);display:grid;place-items:center;font-weight:600;font-size:16px;letter-spacing:.02em}
+.pro h3{font-size:17px;margin:2px 0 2px}.pro .pt{margin:0;color:var(--soft);font-size:15px}
+.pro .col{display:block;font-size:13px;color:var(--soft)}
+.pro .ps{margin:6px 0 0;font-size:14px}.pro .ps a{color:var(--deep);text-underline-offset:3px}
+.qpros{background:var(--mint);border-radius:22px;padding:18px 20px;margin:0 0 28px}
+.qpros h2{font-size:19px!important;margin:0 0 10px!important}
+.qpros ul{list-style:none;padding:0;margin:0 0 8px;display:grid;gap:8px}
+.qpros li a{display:flex;gap:12px;align-items:center;text-decoration:none}
+.qpros .av{width:40px;height:40px;font-size:14px;background:var(--bg)}
+.qpros b{display:block;font-weight:500}.qpros small{display:block;color:var(--soft);font-size:14px}
+.qpros>a{color:var(--deep);text-underline-offset:4px}
