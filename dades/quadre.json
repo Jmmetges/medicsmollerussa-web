@@ -15,7 +15,6 @@
     {"nom": "Mercè Porta", "titol_ca": "Psicòloga", "titol_es": "Psicóloga", "serveis": [ "psi" ], "colegiat": "", "visible": true},
     {"nom": "Montse Palacio", "titol_ca": "Psicòloga", "titol_es": "Psicóloga", "serveis": [ "psi" ], "colegiat": "", "visible": true},
     {"nom": "Ana Maldonado", "titol_ca": "Psicòloga general sanitària", "titol_es": "Psicóloga general sanitaria", "serveis": [ "psi" ], "colegiat": "", "visible": true},
-    {"nom": "Borja Cerdà", "titol_ca": "Podòleg", "titol_es": "Podólogo", "serveis": [ "pod" ], "colegiat": "", "visible": true},
     {"nom": "Carlos Badia", "titol_ca": "Podòleg", "titol_es": "Podólogo", "serveis": [ "pod" ], "colegiat": "", "visible": true}
   ]
 }
