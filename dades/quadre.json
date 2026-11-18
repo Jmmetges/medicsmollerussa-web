@@ -6,7 +6,7 @@
     {"nom": "Dr. José María Herrero Binaburo", "titol_ca": "Pediatre", "titol_es": "Pediatra", "serveis": [ "ped" ], "colegiat": "2285", "visible": true},
     {"nom": "Dra. Gisela Tomayquispe", "titol_ca": "Pediatra", "titol_es": "Pediatra", "serveis": [ "ped" ], "colegiat": "", "visible": true},
     {"nom": "Dr. Pau Olivares", "titol_ca": "Metge de família · Reconeixement de conductors", "titol_es": "Médico de familia · Reconocimiento de conductores", "serveis": [ "fam", "crc" ], "colegiat": "05264", "visible": true},
-    {"nom": "Ana Gómez Gimeno", "titol_ca": "Psicòloga · Reconeixement de conductors", "titol_es": "Psicóloga · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "", "visible": true},
+    {"nom": "Ana Gómez Gimeno", "titol_ca": "Psicòloga · Reconeixement de conductors", "titol_es": "Psicóloga · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "35182", "visible": true},
     {"nom": "Dr. Javier Astorga", "titol_ca": "Metge · Medicina estètica", "titol_es": "Médico · Medicina estética", "serveis": [ "est" ], "colegiat": "05336", "visible": true},
     {"nom": "Laura Pallàs", "titol_ca": "Infermera", "titol_es": "Enfermera", "serveis": [ "inf" ], "colegiat": "4101", "visible": true},
     {"nom": "Maria Escudero", "titol_ca": "Infermera · Analítiques", "titol_es": "Enfermera · Análisis clínicos", "serveis": [ "inf", "lab" ], "colegiat": "", "visible": true},
