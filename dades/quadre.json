@@ -4,7 +4,7 @@
     {"nom": "Dr. Òscar Villanueva", "titol_ca": "Director mèdic · Medicina de família i reconeixement de conductors", "titol_es": "Director médico · Medicina de familia y reconocimiento de conductores", "serveis": [ "fam", "crc" ], "colegiat": "05402", "visible": true},
     {"nom": "Dr. Amós Villanueva", "titol_ca": "Metge · Reconeixement de conductors", "titol_es": "Médico · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "", "visible": true},
     {"nom": "Dr. José María Herrero Binaburo", "titol_ca": "Pediatre", "titol_es": "Pediatra", "serveis": [ "ped" ], "colegiat": "2285", "visible": true},
-    {"nom": "Dra. Gisela", "titol_ca": "Pediatra", "titol_es": "Pediatra", "serveis": [ "ped" ], "colegiat": "", "visible": true},
+    {"nom": "Dra. Gisela Tomayquispe", "titol_ca": "Pediatra", "titol_es": "Pediatra", "serveis": [ "ped" ], "colegiat": "", "visible": true},
     {"nom": "Dr. Pau Olivares", "titol_ca": "Metge de família · Reconeixement de conductors", "titol_es": "Médico de familia · Reconocimiento de conductores", "serveis": [ "fam", "crc" ], "colegiat": "05264", "visible": true},
     {"nom": "Ana Gómez Gimeno", "titol_ca": "Psicòloga · Reconeixement de conductors", "titol_es": "Psicóloga · Reconocimiento de conductores", "serveis": [ "crc" ], "colegiat": "", "visible": true},
     {"nom": "Dr. Javier Astorga", "titol_ca": "Metge · Medicina estètica", "titol_es": "Médico · Medicina estética", "serveis": [ "est" ], "colegiat": "05336", "visible": true},
