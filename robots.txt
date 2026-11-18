@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /area/
 Disallow: /tools/
+Disallow: /dades/
 
 Sitemap: https://medicsmollerussa.com/sitemap.xml

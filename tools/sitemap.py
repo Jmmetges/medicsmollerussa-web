@@ -16,5 +16,5 @@ for f in pages:
     out.append('  </url>'); n+=1
 out.append('</urlset>')
 open('sitemap.xml','w',encoding='utf-8').write('\n'.join(out)+'\n')
-open('robots.txt','w').write('User-agent: *\nAllow: /\nDisallow: /area/\nDisallow: /tools/\n\nSitemap: https://medicsmollerussa.com/sitemap.xml\n')
+open('robots.txt','w').write('User-agent: *\nAllow: /\nDisallow: /area/\nDisallow: /tools/\nDisallow: /dades/\n\nSitemap: https://medicsmollerussa.com/sitemap.xml\n')
 print(n)
